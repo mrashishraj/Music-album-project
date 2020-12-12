@@ -1,8 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 
-
-export default class Navbar extends React.Component{
+class Navbar extends React.Component{
     constructor(props){
         super(props)
         this.state={
@@ -10,12 +11,25 @@ export default class Navbar extends React.Component{
         }
     }
 
-
     render(){
+        const {isAuth} = this.props
         return(
             <>
-            <h1>this is a Navbar</h1>
+                <div className="container p-2 border bg-primary">
+                    <div className="text-white">Music album</div>
+                    <div className="">
+                        {!isAuth?
+                        <Link to="/artist_login"> <button>Artist Login</button> </Link>:null}
+                    </div>
+                        
+                </div>
             </>
         )
     }
 }
+
+const mapStateToProps = state =>({
+    isAuth:state.loginReducer.isAuth
+})
+
+export default connect(mapStateToProps)(Navbar)

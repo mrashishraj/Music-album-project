@@ -1,9 +1,66 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+  "users": [
+    {
+      "id": 1,
+      "username": "arijit",
+      "user_fullname": "Arijit Singh",
+      "password": 12345
+    },
+    {
+      "id": "2",
+      "username": "mikka",
+      "user_fullname": "Mikka Singh",
+      "password": 12345
+    }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "singer_name": "Arijit Singh",
+      "singer_username": "arijit",
+      "album_title": "test",
+      "genre": "test",
+      "year": "2020",
+      "album_songs": [
+        {
+          "id": 1,
+          "songs_name": "Bulliya"
+        },
+        {
+          "id": 2,
+          "songs_name": "Chal ghar chale mere hamdam"
+        },
+        {
+          "id": 3,
+          "songs_name": "Duao me yaad rakhna"
+        },
+        {
+          "id": 4,
+          "songs_name": "Sath chalna yunhi"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "singer_name": "Mikka Singh",
+      "singer_username": "mikka",
+      "album_title": "party",
+      "genre": "rock",
+      "year": "2021",
+      "album_songs": [
+        {
+          "id": 1,
+          "songs_name": "Aankh mare"
+        },
+        {
+          "id": 2,
+          "songs_name": "Milegi milegi"
+        },
+        {
+          "id": 3,
+          "songs_name": "Kalesh"
+        }
+      ]
+    }
+  ]
+}
